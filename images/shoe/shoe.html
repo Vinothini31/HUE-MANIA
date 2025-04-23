@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Shoes</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <div class="logo">Shoes</div>
+    <div class="cart" id="cart">🛒 Cart (<span id="cart-count">0</span>)</div>
+  </header>
+  <center>  <div id="priceFilter">
+    <label for="minPrice">Min Price:</label>
+    <input type="number" id="minPrice" placeholder="e.g. 100" />
+  
+    <label for="maxPrice">Max Price:</label>
+    <input type="number" id="maxPrice" placeholder="e.g. 1000" />
+  
+    <button onclick="applyPriceFilter()">Filter</button>
+  </div>
+  </center>
+
+  <main id="products" class="product-grid"></main>
+
+  <div class="cart-modal" id="cartModal">
+    <div class="cart-content">
+      <span class="close-btn" id="closeCart">&times;</span>
+      <h2>Your Cart</h2>
+      <ul id="cartItems"></ul>
+      <p id="cartTotal"></p>
+    </div>
+  </div>
+<footer>
+    <p>© 2025 Aesthetic Shop | Shoes Collection</p>
+  </footer>
+<script src="shoe.js"></script>
+</body>
+</html>
