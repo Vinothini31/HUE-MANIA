@@ -2,25 +2,56 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Color Wheel Filter</title>
-  <link rel="stylesheet" href="style1.css">
+  <link rel="stylesheet" href="search.css">
 </head>
 <body>
+  <header>
+    <h1>💫 Hue Mania</h1>
+    <nav class="nav-menu">
+      <ul>
+        <li><a href="main.html">Home</a></li>
+        <li><a href="earrings.html">Earrings</a></li>
+        <li><a href="Bag.html">Handbag</a></li>
+        <li><a href="pendants.html">Necklaces</a></li>
+        <li><a href="hairclip.html">Hairclip</a></li>
+        <li><a href="sandal.html">Sandals</a></li>
+        <li><a href="watch.html">Watch</a></li>
+        <li><a href="Bracelets.html">Bracelet</a></li>
+        <li><a href="shoe.html">Shoes</a></li>
+      </ul>
+    </nav>
+  </header>
 
+  <!-- Color Wheel and Search Section -->
   <div class="search-container">
     <div class="color-wheel" id="colorWheel"></div>
-
-    <div style="position: relative;">
-      <input type="text" id="searchInput" placeholder="Search items..." oninput="searchItems()" aria-label="Search items">
-      <button type="button" id="clearBtn" onclick="clearSearch()" aria-label="Clear search">X</button>
+    
+    <div class="search-box">
+      <input type="text" id="searchInput" placeholder="Search items..." oninput="searchItems()" />
     </div>
 
-    <button type="button" class="clear-color-btn" onclick="clearColor()">Clear Color</button>
+    <button class="clear-color-btn" onclick="clearColor()">Refresh</button>
   </div>
 
   <div id="results" class="results-container"></div>
 
-  <script src="script.js"></script>
+  <!-- Style Match Button and Panel -->
+  <button class="stylematch-btn" onclick="toggleStyleMatch()">🎨 StyleMatch</button>
+
+  <div class="stylematch-panel" id="stylematchPanel">
+    <label for="style">Select Your Style:</label>
+    <select id="style" onchange="renderCards()">
+      <option value="">-- Choose a Style --</option>
+      <option value="minimalist">Minimalist</option>
+      <option value="vibrant">Vibrant</option>
+      <option value="elegant">Elegant</option>
+      <option value="streetwear">Streetwear</option>
+    </select>
+    <section id="results" class="grid"></section>
+  </div>
+
+  <!-- Linking JavaScript file -->
+  <script src="search.js"></script>
 </body>
 </html>
