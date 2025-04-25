@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Purchase Product - hum-mania</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Arial', sans-serif;
+      background-color: #f9f9f9;
+    }
+
+    .purchase-section {
+      background-color: #fff;
+      max-width: 1000px;
+      margin: 40px auto;
+      padding: 40px 30px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    }
+
+    .purchase-section h2 {
+      font-size: 30px;
+      color: #232f3e;
+      margin-bottom: 20px;
+      text-align: center;
+      text-transform: uppercase;
+    }
+
+    .purchase-section p {
+      font-size: 16px;
+      color: #333;
+      line-height: 1.6;
+      margin-bottom: 20px;
+    }
+
+    .purchase-details {
+      background-color: #f3f3f3;
+      padding: 20px;
+      border-radius: 8px;
+      margin-top: 20px;
+    }
+
+    .purchase-details ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .purchase-details li {
+      padding: 10px 0;
+      border-bottom: 1px solid #ddd;
+    }
+
+    .purchase-details li:last-child {
+      border-bottom: none;
+    }
+
+    .btn-buy {
+      display: inline-block;
+      padding: 12px 30px;
+      background-color: #ff6600;
+      color: #fff;
+      font-size: 16px;
+      border: none;
+      border-radius: 5px;
+      text-decoration: none;
+      margin-top: 20px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .btn-buy:hover {
+      background-color: #e65c00;
+    }
+
+    .advertisement-banner {
+      background-color: #ffcc00;
+      color: #000;
+      text-align: center;
+      padding: 40px 20px;
+      font-size: 22px;
+      font-weight: bold;
+      letter-spacing: 1px;
+      margin: 30px auto;
+    }
+
+    .advertisement-banner span {
+      display: block;
+      font-size: 16px;
+      font-weight: normal;
+      margin-top: 10px;
+    }
+
+    @media (max-width: 600px) {
+      .purchase-section {
+        padding: 20px;
+      }
+
+      .purchase-section h2 {
+        font-size: 24px;
+      }
+
+      .btn-buy {
+        width: 100%;
+        font-size: 18px;
+      }
+
+      .advertisement-banner {
+        font-size: 18px;
+        padding: 30px 15px;
+      }
+
+      .advertisement-banner span {
+        font-size: 14px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="purchase-section">
+    <h2>Purchase Product</h2>
+    <p>Select your product and complete your order in a few easy steps. Enjoy fast delivery and secure payments.</p>
+
+    <div class="purchase-details">
+      <ul>
+        <li><strong>Product:</strong> Stylish Leather Bag</li>
+        <li><strong>Price:</strong> ₹1,299</li>
+        <li><strong>Size:</strong> Medium</li>
+        <li><strong>Color:</strong> Tan Brown</li>
+        <li><strong>Delivery:</strong> 3-5 business days</li>
+      </ul>
+      <a href="#" class="btn-buy">Buy Now</a>
+    </div>
+  </div>
+
+  <div class="advertisement-banner">
+    🎁 Limited-Time Deal – 50% OFF on All Bags!  
+    <span>Use code <b>STYLE50</b> at checkout. Hurry, offer valid till midnight!</span>
+  </div>
+
+</body>
+</html>

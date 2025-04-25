@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Advertise Your Product</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, sans-serif;
+      background-color: #f5f5f5;
+    }
+
+    .advertise-section {
+      background-color: #ffffff;
+      max-width: 1000px;
+      margin: 40px auto;
+      padding: 40px 30px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+      text-align: center;
+    }
+
+    .advertise-section h2 {
+      font-size: 28px;
+      color: red;
+      margin-bottom: 20px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .advertise-section p {
+      font-size: 16px;
+      color: #444;
+      line-height: 1.6;
+      margin-bottom: 30px;
+    }
+
+    .ad-benefits {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      margin-bottom: 30px;
+    }
+
+    .benefit-box {
+      background-color: lightsteelblue;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      padding: 20px;
+      width: 280px;
+      margin: 10px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+      transition: transform 0.3s;
+    }
+
+    .benefit-box:hover {
+      transform: translateY(-5px);
+    }
+
+    .benefit-box h4 {
+      font-size: 18px;
+      color: #ff6600;
+      margin-bottom: 10px;
+    }
+
+    .benefit-box p {
+      font-size: 14px;
+      color: black;
+    }
+
+    .cta-button {
+      background-color: #ff6600;
+      color: white;
+      font-size: 16px;
+      padding: 12px 30px;
+      border: none;
+      border-radius: 6px;
+      text-decoration: none;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .cta-button:hover {
+      background-color: #e85c00;
+    }
+
+    @media (max-width: 768px) {
+      .ad-benefits {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .benefit-box {
+        width: 90%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="advertise-section">
+    <h2>Advertise Your Product</h2>
+    <p>Boost your sales and visibility on hum-mania.in with easy and affordable advertising solutions. Get noticed by thousands of buyers!</p>
+
+    <div class="ad-benefits">
+      <div class="benefit-box">
+        <h4>Increased Reach</h4>
+        <p>Reach more customers through featured listings and homepage banners.</p>
+      </div>
+      <div class="benefit-box">
+        <h4>Affordable Plans</h4>
+        <p>Choose from flexible advertising packages that suit your budget.</p>
+      </div>
+      <div class="benefit-box">
+        <h4>Performance Tracking</h4>
+        <p>Track views, clicks, and conversions in real-time to measure success.</p>
+      </div>
+    </div>
+
+    <a href="#" class="cta-button">Start Advertising</a>
+  </div>
+
+</body>
+</html>

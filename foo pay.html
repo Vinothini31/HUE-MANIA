@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Pay on Merchants</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, sans-serif;
+      background-color: #f4f4f4;
+    }
+
+    .pay-section {
+      background-color: #fff;
+      max-width: 500px;
+      margin: 50px auto;
+      padding: 40px;
+      border-radius: 12px;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+    }
+
+    .pay-section h2 {
+      text-align: center;
+      color: #232f3e;
+      margin-bottom: 30px;
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    .form-group label {
+      display: block;
+      margin-bottom: 8px;
+      font-weight: 600;
+    }
+
+    .form-group input, .form-group select {
+      width: 100%;
+      padding: 12px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 16px;
+    }
+
+    .btn-submit {
+      width: 100%;
+      padding: 14px;
+      background-color: #ff6600;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .btn-submit:hover {
+      background-color: #e85c00;
+    }
+
+    .note {
+      font-size: 14px;
+      text-align: center;
+      color: #888;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="pay-section">
+    <h2>Pay on Merchants</h2>
+
+    <form>
+      <div class="form-group">
+        <label for="merchant-name">Merchant Name</label>
+        <input type="text" id="merchant-name" placeholder="e.g., Hum-Mania Fashion" required>
+      </div>
+
+      <div class="form-group">
+        <label for="amount">Amount (INR)</label>
+        <input type="number" id="amount" placeholder="e.g., 1500" required>
+      </div>
+
+      <div class="form-group">
+        <label for="payment-method">Payment Method</label>
+        <select id="payment-method" required>
+          <option value="">Select Payment Method</option>
+          <option value="upi">UPI</option>
+          <option value="credit">Credit Card</option>
+          <option value="debit">Debit Card</option>
+          <option value="netbanking">Net Banking</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="email">Your Email</label>
+        <input type="email" id="email" placeholder="e.g., you@example.com" required>
+      </div>
+
+      <button type="submit" class="btn-submit">Proceed to Pay</button>
+    </form>
+
+    <div class="note">Secure payment powered by hum-mania.in</div>
+  </div>
+
+</body>
+</html>
