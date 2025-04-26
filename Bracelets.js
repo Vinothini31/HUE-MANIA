@@ -15,8 +15,7 @@ const products = [
     { id: 13, name: "Petal & Shine", price: 254.99, img: "bracelets/p13.jpg" },
     { id: 14, name: "gem crystal", price: 900.00, img: "bracelets/p14.jpg" }
   ];
-
-  let cartCount = 0;
+let cartCount = 0;
   let cartItems = [];
   
   function applyPriceFilter() {
@@ -42,11 +41,13 @@ const products = [
         <h3>${product.name}</h3>
         <p>$${product.price.toFixed(2)}</p>
         <button onclick="addToCart(${product.id})">Add to Cart</button>
+        <button class="buy-now-btn" onclick="buynow(${product.id})">Buy now</button>
+      
       `;
+      //for buy now
       container.appendChild(div);
     });
   }
-  
   function renderProducts() {
     const container = document.getElementById('products');
     container.innerHTML = '';
@@ -59,7 +60,9 @@ const products = [
         <h3>${product.name}</h3>
         <p>$${product.price.toFixed(2)}</p>
         <button onclick="addToCart(${product.id})">Add to Cart</button>
+        <button onclick="buynow(${product.id})">Buy Now</button>            
       `;
+      //for buy now
       container.appendChild(div);
     });
   }
@@ -70,7 +73,17 @@ const products = [
     cartCount++;
     document.getElementById('cart-count').innerText = cartCount;
   }
-  
+  //for boy now
+  function buynow(id) {
+    const product = products.find(p => p.id === id);
+    const selectedProduct = {
+      name: product.name,
+      price: product.price,
+      imgUrl: product.img
+    };
+    localStorage.setItem('selectedProduct', JSON.stringify(selectedProduct));
+    window.location.href = 'p.html'; //for buy now
+  }
   function openCartModal() {
     const modal = document.getElementById('cartModal');
     const list = document.getElementById('cartItems');
@@ -105,4 +118,6 @@ const products = [
   });
   
   renderProducts();
+  
+
   
