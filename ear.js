@@ -20,7 +20,6 @@ const products = [
     { id: 19, name: "daisy", price: 13.99, img: "earings/129.jpg" },
     { id: 20, name: "kuromi", price: 15.99, img: "earings/130.jpg" }
   ];
-  
   let cartCount = 0;
   let cartItems = [];
   
@@ -47,7 +46,10 @@ const products = [
         <h3>${product.name}</h3>
         <p>$${product.price.toFixed(2)}</p>
         <button onclick="addToCart(${product.id})">Add to Cart</button>
+        <button class="buy-now-btn" onclick="buynow(${product.id})">Buy now</button>
+      
       `;
+      //for buy now
       container.appendChild(div);
     });
   }
@@ -63,7 +65,9 @@ const products = [
         <h3>${product.name}</h3>
         <p>$${product.price.toFixed(2)}</p>
         <button onclick="addToCart(${product.id})">Add to Cart</button>
+        <button onclick="buynow(${product.id})">Buy Now</button>            
       `;
+      //for buy now
       container.appendChild(div);
     });
   }
@@ -74,7 +78,17 @@ const products = [
     cartCount++;
     document.getElementById('cart-count').innerText = cartCount;
   }
-  
+  //for boy now
+  function buynow(id) {
+    const product = products.find(p => p.id === id);
+    const selectedProduct = {
+      name: product.name,
+      price: product.price,
+      imgUrl: product.img
+    };
+    localStorage.setItem('selectedProduct', JSON.stringify(selectedProduct));
+    window.location.href = 'p.html'; //for buy now
+  }
   function openCartModal() {
     const modal = document.getElementById('cartModal');
     const list = document.getElementById('cartItems');
@@ -109,4 +123,7 @@ const products = [
   });
   
   renderProducts();
+  
+
+
   
