@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Outfit Planner with Earrings</title>
+  <link rel="stylesheet" href="war.css" />
+</head>
+<body>
+
+  <h1>OUTFIT PLANNER</h1>
+
+  <!-- Main Layout: 75% Products | 25% Outfit Canvas -->
+  <div class="main-layout">
+    
+    <!-- Product Grid (Draggable Items) -->
+    <main id="products" class="product-grid"></main>
+
+    <!-- Outfit Planner Board -->
+    <div class="outfit-panel">
+      <div class="outfit-board" id="outfitBoard">
+        <h2 style="text-align:center; color: #888;">OUTFIT</h2>
+        
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Load products from ear.js -->
+  <script src="war.js"></script>
+
+  <!-- Drag + Drop Script -->
+  <script>
+    const board = document.getElementById('outfitBoard');
+    let selectedItem = null;
+
+    board.addEventListener('dragover', e => e.preventDefault());
+
+    board.addEventListener('drop', e => {
+      e.preventDefault();
+      const imageUrl = e.dataTransfer.getData('image');
+      if (!imageUrl) return;
+
+      const newItem = document.createElement('div');
+      newItem.className = 'item';
+      newItem.innerHTML = `<img src="${imageUrl}" alt="Earring">`;
+
+      const boardRect = board.getBoundingClientRect();
+      newItem.style.left = `${e.clientX - boardRect.left - 40}px`;
+      newItem.style.top = `${e.clientY - boardRect.top - 40}px`;
+
+      makeDraggableAndResizable(newItem);
+      board.appendChild(newItem);
+    });
+
+    function makeDraggableAndResizable(el) {
+      let isDragging = false, offsetX = 0, offsetY = 0, scale = 1;
+
+      el.addEventListener('mousedown', e => {
+        isDragging = true;
+        offsetX = e.offsetX;
+        offsetY = e.offsetY;
+        el.classList.add('ghost');
+        selectItem(el);
+      });
+
+      document.addEventListener('mousemove', e => {
+        if (isDragging) {
+          const boardRect = board.getBoundingClientRect();
+          el.style.left = `${e.clientX - boardRect.left - offsetX}px`;
+          el.style.top = `${e.clientY - boardRect.top - offsetY}px`;
+        }
+      });
+
+      document.addEventListener('mouseup', () => {
+        isDragging = false;
+        el.classList.remove('ghost');
+      });
+
+      el.addEventListener('click', () => {
+        selectItem(el);
+      });
+
+      el.addEventListener('wheel', e => {
+        if (el === selectedItem) {
+          e.preventDefault();
+          scale += e.deltaY < 0 ? 0.05 : -0.05;
+          scale = Math.max(0.2, Math.min(3, scale));
+          el.style.transform = `scale(${scale})`;
+        }
+      });
+    }
+let zCounter = 1; // Add this near the top of your script to track z-index
+
+function selectItem(el) {
+  document.querySelectorAll('.outfit-board .item').forEach(item => {
+    item.classList.remove('selected');
+  });
+  el.classList.add('selected');
+  selectedItem = el;
+
+  // Bring selected item to top
+  zCounter++;
+  el.style.zIndex = zCounter;
+}
+
+  
+
+    // Load products as draggable from grid
+    function loadDraggableProducts() {
+      const productsContainer = document.getElementById('products');
+      productsContainer.innerHTML = '';
+
+      products.forEach(p => {
+        const div = document.createElement('div');
+        div.className = 'product';
+        div.setAttribute('draggable', true);
+        div.setAttribute('data-img', p.img);
+        div.innerHTML = `
+          <img src="${p.img}" alt="${p.name}">
+          <h3>${p.name}</h3>
+          <p>$${p.price.toFixed(2)}</p>
+        `;
+        div.addEventListener('dragstart', e => {
+          e.dataTransfer.setData('image', p.img);
+        });
+        productsContainer.appendChild(div);
+      });
+    }
+    
+
+    loadDraggableProducts();
+  </script>
+
+</body>
+</html>
