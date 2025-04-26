@@ -1,19 +1,19 @@
 
 window.products = [
-    { id: 1, name: "beige trench coat", price: 29.99, img: "dress/1.PNG" },
-    { id: 2, name: "cargos", price: 59.99, img: "dress/2.PNG" },
-    { id: 3, name: "black hoodie", price: 45.99, img: "dress/3.PNG" },
-    { id: 4, name: "turtle neck sweatshirt", price: 15.99, img: "dress/5.PNG" },
-    { id: 5, name: "jean top", price: 15.99, img: "dress/4.PNG" },
-    { id: 6, name: "beige skirt", price: 20.99, img: "dress/6.PNG" },
-    { id: 7, name: "jean skirt", price: 10.99, img: "dress/7.PNG" },
-    { id: 8, name: "black boots", price: 17.99, img: "dress/8.PNG" },
-    { id: 9, name: "white shoes", price: 15.99, img: "dress/9.PNG" },
-    { id: 10, name: "black earing", price: 5.99, img: "dress/10.PNG" },
-    { id: 11, name: "silver loop", price: 25.99, img: "dress/11.PNG" },
-    { id: 12, name: "mixed handbag", price: 13.99, img: "dress/12.PNG" },
-    { id: 13, name: "white handbag", price: 15.99, img: "dress/13.PNG" },
-    { id: 14, name: "black handbag", price: 17.99, img: "dress/14.PNG" },
+    { id: 1, name: "beige trench coat", price: 29.99, img: "war/1.PNG" },
+    { id: 2, name: "cargos", price: 59.99, img: "war/2.PNG" },
+    { id: 3, name: "black hoodie", price: 45.99, img: "war/3.PNG" },
+    { id: 4, name: "turtle neck sweatshirt", price: 15.99, img: "war/5.PNG" },
+    { id: 5, name: "jean top", price: 15.99, img: "war/4.PNG" },
+    { id: 6, name: "beige skirt", price: 20.99, img: "war/6.PNG" },
+    { id: 7, name: "jean skirt", price: 10.99, img: "war/7.PNG" },
+    { id: 8, name: "black boots", price: 17.99, img: "war/8.PNG" },
+    { id: 9, name: "white shoes", price: 15.99, img: "war/9.PNG" },
+    { id: 10, name: "black earing", price: 5.99, img: "war/10.PNG" },
+    { id: 11, name: "silver loop", price: 25.99, img: "war/11.PNG" },
+    { id: 12, name: "mixed handbag", price: 13.99, img: "war/12.PNG" },
+    { id: 13, name: "white handbag", price: 15.99, img: "war/13.PNG" },
+    { id: 14, name: "black handbag", price: 17.99, img: "war/14.PNG" },
 ];
 
   
