@@ -4,13 +4,17 @@
   <meta charset="UTF-8">
   <title>Color Wheel Filter</title>
   <link rel="stylesheet" href="search.css">
+  
+  <link rel="stylesheet" href="footer.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 </head>
 <body>
+  
   <header>
     <h1>💫 Hue Mania</h1>
     <nav class="nav-menu">
       <ul>
-        <li><a href="main.html">Home</a></li>
+        <li><a href="search.html">Home</a></li>
         <li><a href="earrings.html">Earrings</a></li>
         <li><a href="Bag.html">Handbag</a></li>
         <li><a href="pendants.html">Necklaces</a></li>
@@ -38,7 +42,8 @@
 
   <!-- Style Match Button and Panel -->
   <button class="stylematch-btn" onclick="toggleStyleMatch()">🎨 StyleMatch</button>
-<button class="war-btn" onclick= "window.location.href='war.html'">outfit Planner</button>
+  <button class="war-btn" onclick= "window.location.href='war.html'">👚 Outfit Planner</button>
+
   <div class="stylematch-panel" id="stylematchPanel">
     <label for="style">Select Your Style:</label>
     <select id="style" onchange="renderCards()">
@@ -51,7 +56,47 @@
     <section id="results" class="grid"></section>
   </div>
 
-  <!-- Linking JavaScript file -->
-  <script src="search.js"></script>
+  <script src="js/search.js"></script>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="row">
+        <div class="footeer-col">
+          <h4>Get to Know Us</h4>
+          <ul>
+            <li><a href="html/foo about.html">About us</a></li>
+            <li><a href="html/foo serv.html">Our Services</a></li>
+            <li><a href="html/foo pri.html">Privacy policy</a></li>
+          </ul>
+        </div>
+        <div class="footeer-col">
+          <h4>Let Us Help You</h4>
+          <ul>
+            <li><a href="html/foo your acc.html">Your Account</a></li>
+            <li><a href="html/foo return centre.html">Returns Centre</a></li>
+            <li><a href="html/foo purchase.html">Purchase Protection</a></li>
+          </ul>
+        </div>
+        <div class="footeer-col">
+          <h4>Make money with us</h4>
+          <ul>
+            <li><a href="html/foo sell.html">Sell on hum-mania</a></li>
+            <li><a href="html/foo protect.html">Protect and Build your Brand</a></li>
+            <li><a href="html/foo advertise.html">Advertise your products</a></li>
+            <li><a href="html/foo pay.html">Pay on Merchants</a></li>
+          </ul>
+        </div>
+        <div class="footeer-col">
+          <h4>Connect with us</h4>
+          <div class="social-links">
+            <li><a href="https://www.instagram.com/yourprofile" target="_blank"><i class="fab fa-instagram"></i></a></li>
+            <li><a href="https://www.facebook.com/yourprofile" target="_blank"><i class="fab fa-facebook"></i></a></li>
+            <li><a href="https://www.linkedin.com/in/yourprofile" target="_blank"><i class="fab fa-linkedin-in"></i></a></li>
+            <li><a href="https://www.twitter.com/yourprofile" target="_blank"><i class="fab fa-twitter"></i></a></li>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>  
 </body>
 </html>
